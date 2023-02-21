@@ -16,7 +16,4 @@ RUN composer create-project composer/satis satis --stability=dev
 
 WORKDIR /var/www/web/offline-repo
 
-# dump vendors from config file
-# RUN php ../satis/bin/satis build ./satis.json .
-
 USER docker
