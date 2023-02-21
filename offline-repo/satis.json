@@ -1,0 +1,21 @@
+{
+  "name": "offline/repo",
+  "homepage": "http://localhost",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packagist.org.ru"
+    }
+  ],
+  "require": {
+    "symfony/var-dumper": "6.2.5"
+  },
+  "require-all": false,
+  "require-dependencies": true,
+  "require-dev-dependencies": true,
+  "archive": {
+    "directory": "dist",
+    "format": "zip",
+    "skip-dev": true
+  }
+}

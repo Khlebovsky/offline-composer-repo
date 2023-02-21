@@ -1,0 +1,5 @@
+.idea
+.git
+
+/offline-repo/*
+!/offline-repo/satis.json

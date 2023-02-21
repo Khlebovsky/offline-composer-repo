@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  webserver:
+    container_name: composer-repo-webserver
+    image: nginx:stable-alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./offline-repo/:/var/www/web/offline-repo
+      - ./docker/nginx/default.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - application
+
+  application:
+    container_name: composer-repo-application
+    build:
+      context: ./docker/php
+    volumes:
+      - ./offline-repo/:/var/www/web/offline-repo
