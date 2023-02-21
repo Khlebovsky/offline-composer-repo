@@ -5,7 +5,7 @@ services:
     container_name: composer-repo-webserver
     image: nginx:stable-alpine
     ports:
-      - "8080:80"
+      - "80:80"
     volumes:
       - ./offline-repo/:/var/www/web/offline-repo
       - ./docker/nginx/default.conf:/etc/nginx/nginx.conf
